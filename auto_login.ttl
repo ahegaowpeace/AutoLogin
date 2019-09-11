@@ -1,0 +1,15 @@
+username = 'ユーザー名'
+hostname = '宛先'
+portnum = '22'
+userpasswd = '"パスワード"'
+keyfile = '"秘密鍵のパス"'
+
+msg = hostname
+strconcat msg ':portnum /ssh /auth=publickey /user='
+strconcat msg username
+strconcat msg ' /passwd='
+strconcat msg userpasswd
+strconcat msg ' /keyfile='
+strconcat msg keyfile
+
+connect msg
